@@ -1,5 +1,6 @@
 export interface APIPlayerLive{
   CHANNEL: {
+    RESULT: "0" | "1";
     BJID: string;
     BJNICK: string;
     CHATNO: string;
