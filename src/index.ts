@@ -8,7 +8,7 @@ const KEEPALIVE_INTERVAL = 30_000;
 const REGEX_PACKET = /(\d{1,4})(\d{6})00/;
 const REGEX_HEXCODE = /([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})/i;
 
-const HEADER = "+".concat("-".repeat(process.stdout.rows), "+");
+const HEADER = "+".concat("-".repeat(100), "+");
 
 const SOOP_PLAYER_LIVE_API = "https://live.afreecatv.com/afreeca/player_live_api.php";
 const bjId = "kumamyong";
@@ -71,7 +71,7 @@ async function main(){
     switch(service){
       case ServiceCode.LOGIN:
         await ws.send(createPacket(ServiceCode.JOINCH, playerLive.CHANNEL.CHATNO, "\f".repeat(5)));
-        console.log("[Socket] : Try login.");
+        console.log(`[Socket] : ${playerLive.CHANNEL.BJNICK} : 채널 입장 시도.`);
         break;
       case ServiceCode.CHATMESG:{
         const [content, userId,,,, userName,,, randomColor, idColor] = chunk;
