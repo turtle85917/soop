@@ -8,9 +8,11 @@
   "keywords": [],
   "author": "@peulto",
   "dependencies": {
-    "node-fetch": "2.6.1"
+    "node-fetch": "2.6.1",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
-    "@types/node-fetch": "^2.6.12"
+    "@types/node-fetch": "^2.6.12",
+    "@types/ws": "^8.5.13"
   }
 }
